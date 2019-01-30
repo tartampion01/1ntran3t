@@ -1,0 +1,28 @@
+<SCRIPT LANGUAGE="VBScript" RUNAT="Server">
+
+Sub Session_OnStart
+	Set Conn = Server.CreateObject("ADODB.Connection")
+	Conn.Open Application("cstring")
+		Conn.Execute("UPDATE inventory SET resdatetime=Null,resuserid=0 WHERE resdatetime < NOW();")
+		Conn.Execute("UPDATE trucks SET resDateHeure=Null,resUsers_ID=0 WHERE resDateHeure < NOW();")
+	Conn.Close
+	Set Conn=Nothing
+	Session.Timeout = 180
+End Sub
+
+
+Sub Application_OnStart
+	Application("root")=Server.MapPath("\")
+	Application("cstring") = "Driver={MySQL ODBC 3.51 Driver}; Server=localhost; Database=reseaudynamique; uid=rdyn; pwd=cb2007;"
+	'Application("cstring") = "Driver={MySQL ODBC 3.51 Driver}; Server=173.237.247.140; Database=reseaudynamique; uid=reseaudynamique; pwd=TT67xgw!**;"
+End Sub
+
+
+Sub Application_OnEnd
+End Sub
+
+Sub Session_OnEnd
+End Sub
+
+</SCRIPT>
+

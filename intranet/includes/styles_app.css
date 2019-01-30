@@ -1,0 +1,139 @@
+body{font-family:Tahoma, Arial, Helvetica, sans-serif;font-size:11px;padding:0;margin:0;height:100%;}
+table{font-size:11px;}
+html{height:100%;}
+
+/*accueil*/
+#!bg_image_accueil{background-image:url(/intranet/images/bg_Intranet_header_accueil.gif);}
+
+#image_accueil{
+	height:182px;
+	margin-top:0px;
+	margin-bottom:10px;
+	background: url(/intranet/images/intranet_header_RD2008.jpg) no-repeat center 0px;
+	margin:auto;
+}
+
+
+
+#container{width:100%;}
+#content{
+	margin:20px;
+	
+	border: 1px solid #C0C0C0;
+}
+
+.textarea {font-family:Tahoma, Arial, Helvetica, sans-serif;font-size:11px;padding:0;margin:0;height:100%;}
+
+/* Nav */
+#header {padding-left: 20px;margin-bottom: 20px;height: 29px;background-image: url(/intranet/images/bkg_nav.gif);}
+#nav {clear:both; display:block; height:29px; list-style:none; margin:0; padding:0; text-indent:0; background: url(/intranet/images/nav_separator.gif) no-repeat; padding-left:2px; float:left;}
+
+#nav li, #second_nav li {display:inline;}
+
+#nav li a {color:#888;display:block;float:left;font-size:14px;font-weight:bold;line-height:28px;height:29px;margin:0;padding:0 15px 0 15px;text-decoration:none;background: url(/intranet/images/nav_separator.gif) no-repeat right 0px;}
+
+#nav li a:hover { color:#000;/* background-color:#FFF;*/}
+
+body#inventory #invent_tab a,body#users #users_tab a, body#emplois #emplois_tab a{background-color:#fff; color:#000;}
+
+#second_nav{float:left;margin-top:7px;}
+#second_nav li a {padding:0 7px 0 7px;border-right:solid 1px #666666;}
+#second_nav li em { font-style:normal;padding:0 7px 0 0;border-right:solid 1px #666666;}
+
+/* Headings */
+h1{color:#042248;font-size:18px;padding:0;margin:0;padding-left:5px;display:block;padding-top:5px;padding-bottom:5px;}
+
+th {color:#FFF;font-size:11px;background-color: #527394;text-align:left;border-right: solid 1px #808080;padding-left:5px;height:18px;}
+
+th.over {background-color:#305377;cursor:pointer;}
+
+tr td{padding-left:5px;padding-top:2px;padding-bottom:2px;}
+tr.high {background-color: #E3E4E6;}
+tr.overdue {background-color: #FFA4A4;}
+tr.over {background-color: #527394;cursor:pointer;color:#FFF;}
+tr.normal {background-color:#F7F7F7;}
+
+.titlebar td, .filterbar td {padding:1px 0px 1px 5px;background-color: #C0C0C0;white-space:nowrap;font-weight:bold;}
+
+
+.filterbar td{padding:0;padding-top:1px;padding-bottom:1px;}
+.filterbar select{width:100%;}
+
+
+.cell_label {background-color: #7C96B7;padding:0 4px 0 4px;color:#FFF;font-weight:bold;border-right: solid 1px #808080;}
+.cell_content {background-color: #DDDDDD;/*padding-left:5px;*/border-top: solid 1px #666666;}
+
+
+/* Buttons */
+.bt{
+	height:19px;
+	width:19px;
+	padding:0 22px;
+	color:#666666;
+	text-decoration:none;
+	line-height:19px;
+	float:right;
+	display:block;
+}
+.bt:hover{background-position:0 -19px;color:green;text-decoration:underline;}
+
+.add {
+  background: url(/intranet/images/bt_new.gif) no-repeat;
+}
+
+.prn {
+ background: url(/intranet/images/bt_prn.gif) no-repeat;
+}
+
+.bt_arrowleft{display:block;height:14px;width:8px;background: url(/intranet/images/arrow_left.gif) no-repeat;}
+.bt_arrowleft:hover{background-position:0 -14px;}
+.bt_arrowleft.off{background-position:0 -28px;}
+
+.bt_arrowright{display:block;height:14px;width:14px;background: url(/intranet/images/arrow_right.gif) no-repeat;}
+.bt_arrowright:hover{background-position:0 -14px;}
+.bt_arrowright.off{background-position:0 -28px;}
+
+/* Text styles */
+.err {font-weight: bold;color: #CC0000;}
+.ok {font-weight: bold;color: #008000;}
+
+/* Login Box */
+#login{border:solid #666666 1px;background-color:#EEEEEE;margin:0;padding:0;}
+#login input{font-size:11px;}
+#login td{padding-left:5px;padding-right:5px;}
+#login th{padding:5px;text-align:left;}
+
+/* Form Elements */
+select,input{font-size:11px;}
+.button {cursor:pointer;font-size:90%;padding:2px;}
+
+form {padding:0;margin:0;}
+
+#upload_layer,.upload {
+	position:absolute;
+	padding:5px;
+	background-color:#DDDDDD;
+	border:1px solid black;
+	z-index:1;
+	white-space: nowrap;
+}
+
+
+/*printer styles*/ 
+@media print{ 
+	.noprint{display:none;} 
+	#content{
+	margin:0;
+	border:none;}
+	#header{display:none;} 
+	
+	tr.high,tr.normal,tr.overdue {background-color:none; border-bottom:1px solid;}
+}
+
+.invemntory_equip_margin {
+	margin-top: 3px;
+}
+
+.invemntory_equip_total {
+	padding: 3px;
+}
