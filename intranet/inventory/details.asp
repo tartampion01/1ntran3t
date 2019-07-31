@@ -6,7 +6,7 @@ PageLevel=0
 %>
 <!--#include virtual="/intranet/includes/check.asp" -->
 <!--#include virtual="/intranet/includes/fck/fckeditor.asp" -->
-<%
+<% 
 
 	Function ConvertFileToBase64( file )
 
@@ -745,6 +745,9 @@ jours </td>
 		<select name="model" id="model">
           <option>-</option>
           <option <%if model="CF 500" then response.write "selected"%>>CF 500</option>
+		  <option <%if model="CV" then response.write "selected"%>>CV</option>
+		  <option <%if model="CV515" then response.write "selected"%>>CV515</option>
+		  <option <%if model="CV 4x4" then response.write "selected"%>>CV 4x4</option>
           <option <%if model="4300" then response.write "selected"%>>4300</option>
           <option <%if model="4400" then response.write "selected"%>>4400</option>
           <option <%if model="7400" then response.write "selected"%>>7400</option>
@@ -809,8 +812,6 @@ jours </td>
 		  <option <%if model="VI025" then response.write "selected"%>>VI025</option>
 		  <option <%if model="VI035" then response.write "selected"%>>VI035</option>
 		  <option <%if model="VI055" then response.write "selected"%>>VI055</option>
-		  <option <%if model="CV" then response.write "selected"%>>CV</option>
-		  <option <%if model="CV 4x4" then response.write "selected"%>>CV 4x4</option>
         </select>
           <select name="config" id="config">
             <option>-</option>
@@ -944,6 +945,7 @@ Facture
         <option <%if demo="Dompeur 12 roues" then response.write "selected"%>>Dompeur 12 roues</option>
         <option <%if demo="Dry box 16'" then response.write "selected"%>>Dry box 16‘</option>
         <option <%if demo="Dry box 20’" then response.write "selected"%>>Dry box  20’</option>
+		<option <%if demo="Dry box 22’" then response.write "selected"%>>Dry box 22’</option>
         <option <%if demo="Dry box 24’" then response.write "selected"%>>Dry box 24’</option>
         <option <%if demo="Dry box 26’" then response.write "selected"%>>Dry box 26’</option>
         <option <%if demo="Dry box 28’" then response.write "selected"%>>Dry box 28’</option>
@@ -974,6 +976,7 @@ Facture
         <option <%if engine="VT365" then response.write "selected"%>>VT365</option>
         <option <%if engine="DT466" then response.write "selected"%>>DT466</option>
         <option <%if engine="DT570" then response.write "selected"%>>DT570</option>
+		<option <%if engine="Inter 6.6" then response.write "selected"%>>Inter 6.6</option>		
         <option <%if engine="HT530" then response.write "selected"%>>HT530</option>
         <option <%if engine="HT570" then response.write "selected"%>>HT570</option>
 		<option <%if engine="L9" then response.write "selected"%>>L9</option>

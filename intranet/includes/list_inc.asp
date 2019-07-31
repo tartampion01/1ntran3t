@@ -136,7 +136,7 @@ End If
 strSQl = strSQL & ";"
 
 'On Error resume next
-'Response.Write(strSQL)
+Response.Write(strSQL)
 'Response.End
 
 rs.Open strSQL, Conn
