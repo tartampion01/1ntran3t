@@ -171,6 +171,7 @@ IF request.querystring("action")="del" then
 	Call DeleteFile("/intranet/pdf/prop"& ID & ".pdf")
 	Call DeleteFile("/intranet/pdf/inv"& ID & ".pdf")
 	Conn.Execute("Delete from inventory Where ID=" & ID & ";")
+	Conn.Execute("Delete from inv_pictures Where product_id=" & ID & ";")
 	Response.Redirect("default.asp")
 End IF
 
@@ -795,6 +796,7 @@ jours </td>
 		  <option <%if model="NQR" then response.write "selected"%>>NQR</option>
 		  <option <%if model="NQR Diesel" then response.write "selected"%>>NQR Diesel</option>
 		  <option <%if model="NRR" then response.write "selected"%>>NRR</option>
+		  <option <%if model="NRR-TW" then response.write "selected"%>>NRR-TW</option>
           <option <%if model="MXT" then response.write "selected"%>>MXT</option>
           <option <%if model="RXT" then response.write "selected"%>>RXT</option>
           <option <%if model="CXT" then response.write "selected"%>>CXT</option>
